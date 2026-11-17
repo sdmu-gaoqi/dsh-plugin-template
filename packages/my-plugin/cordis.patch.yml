@@ -1,0 +1,10 @@
+# 组合包（bundle）的 patch 层：profile 安装本包后，这一层叠加到 @deepseek-ai/dsh-base 之上。
+#
+# name 写包名（由 profile 的 node_modules 解析），不要写源码相对路径。
+# 行 id 只在本层内标识这个插件实例，可以和包名不同。
+- insert:
+    - id: my-plugin
+      name: dsh-my-plugin
+      # 需要覆盖 Config 默认值时取消注释；不写则全部走 schema 里的 default。
+      # config:
+      #   greeting: Hi

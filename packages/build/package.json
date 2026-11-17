@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-build",
+  "version": "0.1.0",
+  "private": true,
+  "description": "把插件包 source/**.ts 编译成 dsh 需要的 lib/**.js 的构建脚本",
+  "bin": {
+    "dsh-plugin-build": "./bin/build.mjs"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

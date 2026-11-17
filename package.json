@@ -1,0 +1,32 @@
+{
+  "name": "dsh-plugin-template",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "node packages/build/bin/build.mjs",
+    "dev": "node packages/build/bin/build.mjs --watch",
+    "clean": "node packages/build/bin/build.mjs --clean",
+    "typecheck": "node packages/build/bin/build.mjs --typecheck",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "format": "oxfmt -c ./node_modules/@wagq/lint-ox/oxfmt.json .",
+    "format:check": "oxfmt -c ./node_modules/@wagq/lint-ox/oxfmt.json --check .",
+    "prepare": "node packages/build/bin/build.mjs --optional",
+    "rename": "node packages/build/bin/init.mjs"
+  },
+  "devDependencies": {
+    "@wagq/lint-ox": "^0.1.2",
+    "esbuild": "^0.28.2",
+    "oxfmt": "0.75.0",
+    "oxlint": "^1.90.0",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@11.16.0"
+}

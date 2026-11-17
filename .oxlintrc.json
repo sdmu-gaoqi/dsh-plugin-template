@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./node_modules/@wagq/lint-ox/oxlint/base.json"],
+  "env": {
+    "node": true
+  },
+  "ignorePatterns": ["**/node_modules/**", "**/lib/**", "**/*.d.ts"]
+}
